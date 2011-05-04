@@ -1,4 +1,8 @@
-name: Mootools Textarea Resizer
-author: scrum8
+name: Element.Resize
+author: astolwijk
+current: 1.0
 category: Forms
-tags: [textarea, form]
+tags: [Element, Textarea, Resize, Drag]
+
+sources:
+  - "Source/Element.Resizable.js"
