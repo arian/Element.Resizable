@@ -1,19 +1,13 @@
-Mootools Textarea Resizer
-=========================
+Mootools Element.Resizable
+==========================
 
-A simple [Mootools][1] textarea resizer plugin.
-
-
-Dependencies
-------------
-
-- Mootools 1.2.x (Tested with Mootools 1.2.3 and 1.2.4)
+A simple element resizer plugin.
 
 
 How to use
 ----------
 
-Now with this plugin you shall be able to transform your textarea into a resizable textarea with one line of code like this:
+Now with this plugin you shall be able to transform your textarea, iframe or any other element into a resizable element with one line of code like this:
 
     window.addEvent('load', function() {
         $$('textarea').resizable();
@@ -23,13 +17,24 @@ Now with this plugin you shall be able to transform your textarea into a resizab
 - More than one textarea will also work.
 - Heck, it even works on iframe
 
-Take a look at the [example][2] provided with this distribution on how to use it.
+Take a look at the demo in the demo folder.
+
+### Other stuff
+
+This works pretty good with [DynamicMather](https://github.com/cpojer/mootools-dynamic-matcher) from [PowerTools!](http://cpojer.net/PowerTools)
+
+	var Matcher = new DynamicMatcher;
+	Matcher.register('textarea:not(.mceEditor):not(.noResizable)', function(elements){
+		for (var element, i = elements.length - 1; element = elements[i--];){
+			if (!element.retrieve('resizable')) element.resizable();
+		}
+	}).update();
+
+Now you can call `Matcher.update()` elsewhere if you added new elements to your page.
 
 
-License
+Credits
 -------
-Copyright (c) 2009 Joshua Partogi (http://scrum8.com/).
 
+This is roughly based on the work of Joshua Partogi (http://scrum8.com/) (c) 2009.
 
-  [1]: http://mootools.net
-  [2]: http://sitemedia.scrum8.com/textarea-resizer/example.html
