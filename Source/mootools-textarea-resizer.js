@@ -1,45 +1,38 @@
 /*
 ---
-description: Mootools TextareaResizer plugin
 
-license: MIT-style
-
-authors:
-  - Joshua Partogi (http://scrum8.com/)
-  - Arian Stolwijk
-
-requires:
-  core/1.2.4:Core
-  more/1.2.4:Drag
-
-provides: [Element.resizable]
+name: Element.Resizable
+description: Adds a handle at the bottom of a element to resize it's height
+authors: [Arian Stolwijk, Joshua Partogi (http://scrum8.com/)]
+license: MIT-style license.
+requires: [Core/Element, More/Drag]
+provides: Element.Resizable
 
 ...
 */
 
-Element.implement('resizable',function(){
+Element.implement('resizable', function(){
 	var el = this;
-	var handle = new Element('div',{
-		'class': 'grippie',
-		styles: {
-			width: el.getSize().x
-		}
-	}),
-	wrapper = new Element('div',{
-		'class' : 'resizable-textarea-wrapper'
-	}).inject(el,'after')
+
+	var handle = new Element('div.grippie', {
+		styles: {width: el.getSize().x}
+	});
+
+	new Element('div.resizable-textarea-wrapper')
+		.inject(el, 'after')
 		.adopt(el)
 		.adopt(handle);
 
-	el.makeResizable({
+	el.store('resizable', el.makeResizable({
 		modifiers: {x: false, y: 'height'},
 		limit: {y: [50, false]},
 		handle: handle,
 		onStart: function(){
-			el.setStyle('opacity',0.3);
+			el.setStyle('opacity', 0.3);
 		},
 		onComplete: function(){
-			el.setStyle('opacity',1);
+			el.setStyle('opacity', 1);
 		}
-	});
+	}));
+	return this;
 });
