@@ -1,43 +1,43 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <title>Mootools textarea resizer example</title>
-        <link rel="stylesheet" type="text/css" href="../Source/textarea-resizer.css"/>
-        <style type="text/css">
-            iframe { margin: 0; }
-            textarea, iframe { border: 1px solid #ddd; font: 12px Verdana; }
-        </style>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js"></script>
-        <script type="text/javascript" src="mootools-1.2.4.2-more.js"></script>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mootools textarea resizer example</title>
+		<link rel="stylesheet" type="text/css" href="../Source/Element.Resizable.css"/>
 
-        <script type="text/javascript" src="../Source/mootools-textarea-resizer.js"></script>
-        <script type="text/javascript">
-            window.addEvent('domready', function() {
-                // Any Mootools Element function will work. Just comment out either one of these lines:
-                //
-                // $('description').resizable();
-                $$('textarea').resizable();
-                $$('iframe').resizable();
-                // $$('p > #description').resizable();
-            });
-        </script>
-    </head>
-    <body>
-        <p>
-            <h2>Simple textarea + Resizer bar (grippie)</h2>
-            <textarea id="description" cols="90" rows="10" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
-        </p>
+		<style type="text/css">
+			iframe { margin: 0; }
+			textarea, iframe { border: 1px solid #ddd; font: 12px Verdana; }
+		</style>
+	
+		<script src="http://ajax.googleapis.com/ajax/libs/mootools/1.3.1/mootools.js"></script>
+		<script src="mootools-more.js"></script>
+		<script src="../Source/Element.Resizable.js"></script>
+	
+		<script>
+			window.addEvent('domready', function() {
+				// Any Mootools Element function will work. Just comment out either one of these lines:
+				//
+				// $('description').resizable();
+				$$('textarea').resizable();
+				$$('iframe').resizable();
+				// $$('p > #description').resizable();
+			});
+		</script>
 
-        <p>
-            <h2>Simple iFrame + Resizer bar (grippie)</h2>
-            <iframe src="http://mootools.net" width="800px" height="200px"></iframe>
-        </p>
+	</head>
+	<body>
+		<h2>Simple textarea + Resizer bar (grippie)</h2>
+		<p>
+			<textarea id="description" cols="90" rows="10" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
+		</p>
+		
+		<h2>Simple iFrame + Resizer bar (grippie)</h2>
+		<iframe src="http://mootools.net" width="800" height="200"></iframe>
 
-        <p>
-             <h2>Another Simple textarea + Resizer bar (grippie)</h2>
-            <textarea cols="90" rows="10" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
-        </p>
+		<h2>Another Simple textarea + Resizer bar (grippie)</h2>
+		<p>
+			<textarea cols="90" rows="10" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
+		</p>
 
-    </body>
+	</body>
 </html>
