@@ -1,8 +1,9 @@
 name: Element.Resizable
 author: astolwijk
-current: 1.0
+current: 1.1
 category: Forms
 tags: [Element, Textarea, Resize, Drag]
+demo: http://aryweb.nl/projects/Element.Resizable/demo/example.html
 
 sources:
   - "Source/Element.Resizable.js"

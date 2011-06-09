@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Mootools textarea resizer example</title>
+		<title>Mootools Element.Resizable — textarea resizer example</title>
 		<link rel="stylesheet" type="text/css" href="../Source/Element.Resizable.css"/>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
 
-		<style type="text/css">
-			iframe { margin: 0; }
-			textarea, iframe { border: 1px solid #ddd; font: 12px Verdana; }
-		</style>
-	
-		<script src="http://ajax.googleapis.com/ajax/libs/mootools/1.3.1/mootools.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/mootools/1.3.2/mootools-nocompat.js"></script>
 		<script src="mootools-more.js"></script>
 		<script src="../Source/Element.Resizable.js"></script>
-	
+
 		<script>
 			window.addEvent('domready', function() {
-				// Any Mootools Element function will work. Just comment out either one of these lines:
-				//
-				// $('description').resizable();
 				$$('textarea').resizable();
 				$$('iframe').resizable();
-				// $$('p > #description').resizable();
 			});
 		</script>
 
 	</head>
 	<body>
-		<h2>Simple textarea + Resizer bar (grippie)</h2>
-		<p>
-			<textarea id="description" cols="90" rows="10" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
-		</p>
-		
-		<h2>Simple iFrame + Resizer bar (grippie)</h2>
-		<iframe src="http://mootools.net" width="800" height="200"></iframe>
 
-		<h2>Another Simple textarea + Resizer bar (grippie)</h2>
-		<p>
-			<textarea cols="90" rows="10" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
-		</p>
+		<div id="container">
+
+			<h1>Element.Resizable</h1>
+
+			<h2>Textarea + Resizer bar (grippie)</h2>
+			<p>
+				<textarea id="description" cols="90" rows="10" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
+			</p>
+
+			<h2>IFrame + Resizer bar (grippie)</h2>
+			<iframe src="http://mootools.net" width="800" height="200"></iframe>
+
+			<h2>Another textarea + Resizer bar (grippie)</h2>
+			<p>
+				<textarea cols="90" rows="10" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
+			</p>
+
+		</div>
 
 	</body>
 </html>
