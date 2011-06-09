@@ -33,6 +33,12 @@ This works pretty good with [DynamicMather](https://github.com/cpojer/mootools-d
 Now you can call `Matcher.update()` elsewhere if you added new elements to your page.
 
 
+Screenshots
+-----------
+
+![Screenshot 1](https://github.com/arian/Element.Resizable/raw/master/screenshot.png)
+
+
 Credits
 -------
 
